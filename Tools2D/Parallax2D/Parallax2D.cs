@@ -126,7 +126,7 @@ namespace BoilerTools.Tools2D
             height += ScalePadding.y * Mathf.Sign(height);
 
             // Apply scale changes
-            transform.localScale = new Vector3(width, height, transform.position.z);
+            transform.localScale = new Vector3(width, height, transform.localScale.z);
         }
     }
 
