@@ -58,6 +58,8 @@ namespace BoilerTools.Tools2D
             cameraDiff = lastCamera - camera.transform.position;
             lastCamera = camera.transform.position;
 
+            if(cameraDiff.magnitude > 5f) { return; }
+
             // Calculate offset movement based on camera difference
             Vector2 offset = new Vector2();
             offset.x = cameraDiff.x * MovementScale.x * Time.deltaTime;
@@ -69,6 +71,11 @@ namespace BoilerTools.Tools2D
 
             // Apply offset
             material.mainTextureOffset = offset;
+        }
+
+        public void ResetTextureOffset()
+        {
+            //material.mainTextureOffset = Vector2.zero;
         }
 
         /// <summary>
