@@ -75,7 +75,7 @@ namespace BoilerTools.Tools2D
 
         public void ResetTextureOffset()
         {
-            //material.mainTextureOffset = Vector2.zero;
+            material.mainTextureOffset = Vector2.zero;
         }
 
         /// <summary>
