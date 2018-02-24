@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-    float xin, yin = 0;
+    //float xin, yin = 0;
     public float movespeed = 5;
 
 	// Use this for initialization
