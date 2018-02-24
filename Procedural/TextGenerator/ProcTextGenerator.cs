@@ -120,7 +120,7 @@ namespace BoilerTools.Procedural {
             }
         }
 
-        public void ToString()
+        public void DisplayDebugWordMap()
         {
             foreach(var word in wordMap)
             {
