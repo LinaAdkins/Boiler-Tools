@@ -32,7 +32,8 @@ namespace BoilerTools.Tools2D
             camera = GetCamera();
             material = GetComponent<MeshRenderer>().sharedMaterial;
 
-            material.mainTextureOffset = Vector2.zero; // Reset offset so if we quit in editor we aren't left with a weird offset
+            // Reset on start in case we start with a weird offset
+            material.mainTextureOffset = Vector2.zero;
 
             ScaleToCamera();
         }
@@ -134,6 +135,12 @@ namespace BoilerTools.Tools2D
 
             // Apply scale changes
             transform.localScale = new Vector3(width, height, transform.localScale.z);
+        }
+
+        void OnApplicationQuit()
+        {
+            // Reset texture offset otherwise editor will save it as new!
+            material.mainTextureOffset = Vector2.zero;
         }
     }
 
